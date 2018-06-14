@@ -44,15 +44,8 @@ void BigFont::clear()
 
 void BigFont::initialize()
     {
-    switch (theFontMode)
+   	for (uint8_t i = 0; i < 8; i++)
         {
-        case fontMode::fixed2x2:
-            break;
-        case fontMode::fixed2x3:
-            break;
-        case fontMode::proportional2:
-            break;
-        default:
-            break;
+        theDisplay->setCGRam(segments, i);
         }
     }

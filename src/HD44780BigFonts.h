@@ -38,6 +38,8 @@ class BigFont
     private:
         HD44780* theDisplay;											// pointer to the display object
         fontMode theFontMode;
+		uint8_t* CGData;												// points to an array holding the Character Generator patterns - set to point to the correct ROM data upon initialization fo a certain font type
+		uint8_t* fontData;												// points to an array holding the data to translate from ASCII to font-segments..
         uint8_t* displayData;											// pointer to dynamic storage which holds a copy of the data to be shown on the display
 		uint8_t cols;													// how many cols - chars on one line
 		uint8_t rows;													// how many rows = lines no the display
